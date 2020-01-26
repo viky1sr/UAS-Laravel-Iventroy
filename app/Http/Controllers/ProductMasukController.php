@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use PDF;
 use App\Product;
+use App\Product_Masuk;
 use App\Supplier;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
@@ -154,4 +155,5 @@ class ProductMasukController extends Controller
         $pdf = PDF::loadView('product_masuk.productMasukPDF', compact('product_masuk'));
         return $pdf->download($product_masuk->id.'_product_masuk.pdf');
     }
+
 }
